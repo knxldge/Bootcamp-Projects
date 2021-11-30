@@ -178,9 +178,11 @@ SSH into the control node and follow the steps below:
 - Run the playbook **ansible-playbook filebeat-playbook.yml **, and navigate to ** Your Web Server ** to check that the installation worked as expected.
 
 - Addition: Navigate to the Kibana weblink: http://<IP ADDRESS>/app/kibana#/home/tutorial/systemLogs - Check Data for confirmation
+	
 ![Alt Text](https://github.com/knxldge/Bootcamp-Projects/blob/main/Images/filebeats_screenshot.PNG)
 
 ### Installation: Metricbeat
+	
 - Copy the ** metricbeat-playbook.yml ** file to /etc/ansible/metricbeat-playbook.yml.
 
 - Update the host file to include group 'webservers' with: <IP ADDRESS> ansible_python_interpreter=/usr/bin/python3
