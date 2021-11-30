@@ -2,7 +2,7 @@
 
 The files in this repository were used to configure the network depicted below.
 
-! (https://github.com/knxldge/Bootcamp-Projects/blob/0d15f981ca89c186f5aa906176b07938b4f93ce7/Images/ELK_Network_Stack_Diagram.png)
+!(https://github.com/knxldge/Bootcamp-Projects/blob/0d15f981ca89c186f5aa906176b07938b4f93ce7/Images/ELK_Network_Stack_Diagram.png)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the config file may be used to install only certain pieces of it, such as Filebeat.
 																
