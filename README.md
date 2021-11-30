@@ -142,6 +142,7 @@ Metricbeat & Filebeat
 		
 These Beats allow us to collect the following information from each machine:
 In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
+
 ### Filebeat: 
 - Filebeat helps generate and organize log files to send to Logstash and Elasticsearch. logs information about the file system, including which files have changed and when.
 
@@ -154,6 +155,7 @@ In order to use the playbook, you will need to have an Ansible control node alre
 SSH into the control node and follow the steps below:
 
 ####Installation: ELK Container
+
 - Copy the ** install-elk.yml ** file to /etc/ansible/install-elk.yml.
 
 - Update the host file to include group 'elk' with:  <IP ADDRESS> ansible_python_interpreter=/usr/bin/python3
@@ -161,6 +163,7 @@ SSH into the control node and follow the steps below:
 - Run the playbook **ansible-playbook install-elk.yml **, and navigate to ** Your ELK Server - http://***Pub IP Address***/app/kibana#** to check that the installation worked as expected.
 
 ### Installation: Filebeat
+	
 - Copy the ** filebeat-playbook.yml **  file to etc/ansible/filebeat-playbook.yml.
 
 - Update the host file to include group 'webservers' with: <IP ADDRESS> ansible_python_interpreter=/usr/bin/python3
