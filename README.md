@@ -8,16 +8,16 @@ The files in this repository were used to configure the network depicted below.
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the config file may be used to install only certain pieces of it, such as Filebeat.
 																
 ## Playbook File:												
-#### Web Server Playbook: Playbook_Files/my-playbook.yml									
-#### ELK VM w/ Docker: Playbook_Files/install-elk.yml									
+- #### Web Server Playbook: Playbook_Files/my-playbook.yml									
+- #### ELK VM w/ Docker: Playbook_Files/install-elk.yml									
 																
-#### Filebeat Installation:Playbook_Files/filebeat-playbook.yml								
-----| 	Will need a config file for this playbook: Playbook_Files/Config_Files/filebeat-config.yml			
+- #### Filebeat Installation:Playbook_Files/filebeat-playbook.yml								
+Will need a config file for this playbook: Playbook_Files/Config_Files/filebeat-config.yml			
     
     *** Will need to edit the drop in filebeat.yml destination for this file ***					
 																
-==> Metricbeat Installation:Playbook_Files/metricbeat-playbook.yml							
-----| 	Will need a config file for this playbook: Playbook_Files/Config_Files/metricbeat-config.yml			
+- #### Metricbeat Installation:Playbook_Files/metricbeat-playbook.yml							
+Will need a config file for this playbook: Playbook_Files/Config_Files/metricbeat-config.yml			
 		
     *** Will need to edit the drop in metricbeat.yml destination for this file ***												
 																
