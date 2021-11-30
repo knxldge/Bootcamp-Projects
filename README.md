@@ -12,12 +12,12 @@ These files have been tested and used to generate a live ELK deployment on Azure
 - #### ELK VM w/ Docker: Playbook_Files/install-elk.yml									
 																
 - #### Filebeat Installation:Playbook_Files/filebeat-playbook.yml								
-Will need a config file for this playbook: Playbook_Files/Config_Files/filebeat-config.yml			
+*Will need a config file for this playbook: Playbook_Files/Config_Files/filebeat-config.yml*			
     
     *** Will need to edit the drop in filebeat.yml destination for this file ***					
 																
 - #### Metricbeat Installation:Playbook_Files/metricbeat-playbook.yml							
-Will need a config file for this playbook: Playbook_Files/Config_Files/metricbeat-config.yml			
+*Will need a config file for this playbook: Playbook_Files/Config_Files/metricbeat-config.yml*			
 		
     *** Will need to edit the drop in metricbeat.yml destination for this file ***												
 																
@@ -35,18 +35,19 @@ This document contains the following details:
 
 ## Description of the Topology
 
-The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
+*The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.*
 
 Load balancing ensures that the application will be highly available, in addition to restricting outside threats to the network.
 What aspect of security do load balancers protect? What is the advantage of a jump box?
 
--Load Balancers Protect the high amount of incoming traffic to your webservers. Load Balancer will distribute traffic evenly between available servers.
-	- The advantage of the jump box is that its able to access and manage a device/VMware in a separate security zone. within this Project 1 (Ability to access 3x Web Servers + 1x ELK Server)
+- #### Load Balancers Protect the high amount of incoming traffic to your webservers. Load Balancer will distribute traffic evenly between available servers.
+- *The advantage of the jump box is that its able to access and manage a device/VMware in a separate security zone. within this Project 1 (Ability to access 3x Web Servers + 1x ELK Server)*
+
 FINRU
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the availability and system integrity
 
 #### What does Filebeat watch for?
-		Collects Data about the file system changes and the time of change 
+		Collects Data about the file system changes and the time of change
 
 #### What does Metricbeat record?
 		Collects Machine Metrics such as uptime (measurement of a system of how healthy the VMware is)
@@ -99,8 +100,9 @@ A summary of the access policies in place can be found in the table below.
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
 What is the main advantage of automating configuration with Ansible?
 Advantages:
-- Ability to configure multiple web servers within the network
-- Efficient - No servers, daemons or database required for Ansible to work.
+- #### Ability to configure multiple web servers within the network
+
+- #### Efficient - No servers, daemons or database required for Ansible to work.
 
 The playbook implements the following tasks:
 In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
