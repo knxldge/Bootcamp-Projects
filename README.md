@@ -95,8 +95,8 @@ A summary of the access policies in place can be found in the table below.
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
 What is the main advantage of automating configuration with Ansible?
 Advantages:
-==> Ability to configure multiple web servers within the network
-==> Efficient - No servers, daemons or database required for Ansible to work.
+- Ability to configure multiple web servers within the network
+- Efficient - No servers, daemons or database required for Ansible to work.
 
 The playbook implements the following tasks:
 In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
@@ -123,7 +123,7 @@ In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Do
 - Enable Docker on start up
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
-!(/Images/docker_ps)
+![Alt Text](https://github.com/knxldge/Bootcamp-Projects/blob/main/Images/docker_ps.PNG)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
@@ -168,7 +168,7 @@ SSH into the control node and follow the steps below:
 - Run the playbook **ansible-playbook filebeat-playbook.yml **, and navigate to ** Your Web Server ** to check that the installation worked as expected.
 
 - Addition: Navigate to the Kibana weblink: http://<IP ADDRESS>/app/kibana#/home/tutorial/systemLogs - Check Data for confirmation
-!(/Images/filebeats_screenshot)
+![Alt Text](https://github.com/knxldge/Bootcamp-Projects/blob/main/Images/filebeats_screenshot.PNG)
 
 ##### Installation: Metricbeat
 - Copy the ** metricbeat-playbook.yml ** file to /etc/ansible/metricbeat-playbook.yml.
@@ -180,7 +180,7 @@ SSH into the control node and follow the steps below:
 - Run the playbook **ansible-playbook metricbeat-playbook.yml **, and navigate to ** Your Web Server ** to check that the installation worked as expected.
 
 - Addition: Navigate to the Kibana weblink: http://<IP ADDRESS>/app/kibana#/home/tutorial/dockerMetrics - Check Data for confirmation
-!(/Images/metricbreats_screenshot)
+![Alt Text](https://github.com/knxldge/Bootcamp-Projects/blob/main/Images/metricbeat_screenshot.PNG)
 
 ### Installation Commands Tips
 Ansible Command:
@@ -202,7 +202,6 @@ NOTE: The files should be within the directory as instructed above
 
 	$ anisble-playbook < YML.File >
 
-
 ### Test The System
 Once the ELK System is up and running such as all files have been implemented for each webservers and ELK Servers. Once all confirmed, this should link with your kibana site.
 
@@ -212,7 +211,7 @@ We can now test the system!
 **** Please Note: The Script can be located via: Scripts/DDoS-Script.sh ****
 
 The following test, We will need to navigate to 'Logs' Page:
-!(/Images/Kibana_site)
+![Alt Text](https://github.com/knxldge/Bootcamp-Projects/blob/main/Images/Kibana_site.png)
 
 The script is using a 'Nested Loop' where it will continue to ssh to the VM Box over and over again.
 
@@ -221,14 +220,14 @@ Run in Terminal './DDoS-Script.sh'
 
 #### Example of DDoS Attack
 Notice the logs have been presented with multiple enteries of an attacker attempting to SSH into your VM Box
-!(/Images/DDoS_Attack)
+![Alt Text](https://github.com/knxldge/Bootcamp-Projects/blob/main/Images/DDoS_Attack.PNG)
 
 ### WGET-DoS Attack
 **** Please Note: The Script can be located via: Scripts/wget-Script.sh ****
 **** Please Note: If necessary to obtain 'wget' function via 'sudo apt install wget'
 
 The following test, We will need to navigate to 'metrics' Page:
-!(/Images/Kibana_site)
+![Alt Text](https://github.com/knxldge/Bootcamp-Projects/blob/main/Images/Kibana_site.png)
 
 The script is using a 'Nested Loop' feature for wget of where it will continue to obtain files from a specific webserver over and over again.
 
@@ -237,7 +236,7 @@ Run in Terminal './wget-Script.sh'
 
 #### Example of WGET Attack
 Notice the CPU Usage is obtaining high amounts of traffic to its server due to consistantly offering their files.
-!(/Images/Web-1_CPU_Usage_ Stressed Test)
+![Alt Text](https://github.com/knxldge/Bootcamp-Projects/blob/main/Images/Web-1_CPU_Usage_%20Stressed_Test.PNG)
 
 ### Stress Test
 The use of a stress function determines how your VMware or server is coping within a stressful environment.
@@ -250,4 +249,4 @@ The use of a stress function determines how your VMware or server is coping with
 *** This will begin stressing your server for 2 minutes ***
 
 ## Example of a Stress Test
-!(/Images/Web-3_CPU_Usage_Stressed_Test)
+![Alt Text](https://github.com/knxldge/Bootcamp-Projects/blob/main/Images/Web-3_CPU_Usage_Stressed_Test.PNG)
