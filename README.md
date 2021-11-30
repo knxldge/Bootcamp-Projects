@@ -36,8 +36,8 @@ The main purpose of this network is to expose a load-balanced and monitored inst
 Load balancing ensures that the application will be highly available, in addition to restricting outside threats to the network.
 What aspect of security do load balancers protect? What is the advantage of a jump box?
 
-		- Load Balancers Protect the high amount of incoming traffic to your webservers. Load Balancer will distribute traffic evenly between available servers.
-			The advantage of the jump box is that its able to access and manage a device/VMware in a separate security zone. within this Project 1 (Ability to access 3x Web Servers + 1x ELK Server)
+-Load Balancers Protect the high amount of incoming traffic to your webservers. Load Balancer will distribute traffic evenly between available servers.
+	- The advantage of the jump box is that its able to access and manage a device/VMware in a separate security zone. within this Project 1 (Ability to access 3x Web Servers + 1x ELK Server)
 FINRU
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the availability and system integrity
 
@@ -101,26 +101,26 @@ What is the main advantage of automating configuration with Ansible?
 The playbook implements the following tasks:
 In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
 
-			==> Install Docker
-				- Installs a light weight virtual box called "Containers"
+==> Install Docker
+- Installs a light weight virtual box called "Containers"
 
-			==> Install Python3-pip
-				- Installs a Programming Software used to Install and Managed Software 
+==> Install Python3-pip
+- Installs a Programming Software used to Install and Managed Software 
 
-			==> Install Docker Module
-				- Python Client fo Docker - Required by Ansible to control the state of Docker Containers
+==> Install Docker Module
+- Python Client fo Docker - Required by Ansible to control the state of Docker Containers
 
-			==> Increase Virtual Memory
-				- Max Virtual memory of the Virtual Box
+==> Increase Virtual Memory
+- Max Virtual memory of the Virtual Box
 
-			==> Use More Memory
-				- Configures VM to use more memory *** ELK Container will not run without this setting ***
+==> Use More Memory
+- Configures VM to use more memory *** ELK Container will not run without this setting ***
 
-			==> Download and Launch Docker ELK Container
-				- Download Docker Elk Image and Launch ELK w/ Published Ports to run
+==> Download and Launch Docker ELK Container
+- Download Docker Elk Image and Launch ELK w/ Published Ports to run
 
-			==> Enable Docker on Boot
-				- Enable Docker on start up
+==> Enable Docker on Boot
+- Enable Docker on start up
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 !(/Images/docker_ps)
@@ -140,13 +140,11 @@ Metricbeat & Filebeat
 		
 These Beats allow us to collect the following information from each machine:
 In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
-			==> Filebeat: 
+==> Filebeat: 
+- Filebeat helps generate and organize log files to send to Logstash and Elasticsearch. logs information about the file system, including which files have changed and when.
 
-				- Filebeat helps generate and organize log files to send to Logstash and Elasticsearch. logs information about the file system, including which files have changed and when.
-
-			==> Metricbeat: 
-
-				- Collects Machine Metrics such as uptime (measurement of a system of how healthy the VMware is)
+==> Metricbeat: 
+- Collects Machine Metrics such as uptime (measurement of a system of how healthy the VMware is)
 		
 ### Using the Playbook & Installation Process
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
