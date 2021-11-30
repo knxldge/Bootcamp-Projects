@@ -5,20 +5,20 @@ The files in this repository were used to configure the network depicted below.
 !(Images/ELK_Network_Stack_Diagram.png)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the config file may be used to install only certain pieces of it, such as Filebeat.
-
 																
-	Playbook File:												
-	==> Web Server Playbook: Playbook_Files/my-playbook.yml									
-	==> ELK VM w/ Docker: Playbook_Files/install-elk.yml									
+Playbook File:												
+==> Web Server Playbook: Playbook_Files/my-playbook.yml									
+==> ELK VM w/ Docker: Playbook_Files/install-elk.yml									
 																
-	==> Filebeat Installation:Playbook_Files/filebeat-playbook.yml								
-	----| 	Will need a config file for this playbook: Playbook_Files/Config_Files/filebeat-config.yml			
-	*** Will need to edit the drop in filebeat.yml destination for this file ***					
+==> Filebeat Installation:Playbook_Files/filebeat-playbook.yml								
+----| 	Will need a config file for this playbook: Playbook_Files/Config_Files/filebeat-config.yml			
+    
+    *** Will need to edit the drop in filebeat.yml destination for this file ***					
 																
-	==> Metricbeat Installation:Playbook_Files/metricbeat-playbook.yml							
-	----| 	Will need a config file for this playbook: Playbook_Files/Config_Files/metricbeat-config.yml			
-		*** Will need to edit the drop in metricbeat.yml destination for this file ***					
-																
+==> Metricbeat Installation:Playbook_Files/metricbeat-playbook.yml							
+----| 	Will need a config file for this playbook: Playbook_Files/Config_Files/metricbeat-config.yml			
+		
+    *** Will need to edit the drop in metricbeat.yml destination for this file ***												
 																
 This document contains the following details:
 - Description of the Topology
@@ -29,7 +29,7 @@ This document contains the following details:
 - How to Use the Ansible Build
 
 
-### Description of the Topology
+#### Description of the Topology
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
@@ -58,13 +58,13 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 | Web-2                 | Webserver | Priv IP: 10.0.0.9                        | Linux Version: ubuntu 18.04  	(DVWA Containers)   |
 | Web-3                 | Webserver | Priv IP: 10.0.0.10                       | Linux Version: ubuntu 18.04 	(DVWA Containers)   |
 
-### Access Policies
+#### Access Policies
 
 The machines on the internal network are not exposed to the public Internet. 
 
 Only the "Jumpe-Box-Provisioner" machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
 
-Whiteisted IP Address's
+## Whiteisted IP Address's
  -------------------------------------------------------------------------------------------------------------------
 | Name                  | Function  | IP Address               | Operating System                           	    |
 |-----------------------|-----------|--------------------------|----------------------------------------------------|
@@ -73,7 +73,7 @@ Whiteisted IP Address's
 Machines within the network can only be accessed by Jumpe-Box-Provisioner within Anisble Container.
 Which machine did you allow to access your ELK VM? What was its IP address?
 
-Machine to Access the ELK VM:
+## Machine to Access the ELK VM:
  -------------------------------------------------------------------------------------------------------------------
 | Name                  | Function  | IP Address               | Operating System                           	    |
 |-----------------------|-----------|--------------------------|----------------------------------------------------|
@@ -94,9 +94,9 @@ A summary of the access policies in place can be found in the table below.
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
 What is the main advantage of automating configuration with Ansible?
-		Advantages:
-			==> Ability to configure multiple web servers within the network
-			==> Efficient - No servers, daemons or database required for Ansible to work.
+Advantages:
+==> Ability to configure multiple web servers within the network
+==> Efficient - No servers, daemons or database required for Ansible to work.
 
 The playbook implements the following tasks:
 In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
