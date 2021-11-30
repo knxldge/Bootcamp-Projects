@@ -1,0 +1,17 @@
+#!/bin/bash
+#nestedloop script
+
+while true
+do
+        for i in 8 9 10
+        do
+                wget -P /dev/null 10.0.0.$i
+
+        done
+done
+
+
+
+
+
+
