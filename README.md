@@ -4,6 +4,7 @@ The files in this repository were used to configure the network depicted below.
 
 ![Alt Text](https://github.com/knxldge/Bootcamp-Projects/blob/main/Images/ELK_Network_Stack_Diagram.png)
 
+
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the config file may be used to install only certain pieces of it, such as Filebeat.
 																
 Playbook File:												
@@ -123,6 +124,7 @@ In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Do
 - Enable Docker on start up
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
+
 ![Alt Text](https://github.com/knxldge/Bootcamp-Projects/blob/main/Images/docker_ps.PNG)
 
 ### Target Machines & Beats
@@ -180,22 +182,23 @@ SSH into the control node and follow the steps below:
 - Run the playbook **ansible-playbook metricbeat-playbook.yml **, and navigate to ** Your Web Server ** to check that the installation worked as expected.
 
 - Addition: Navigate to the Kibana weblink: http://<IP ADDRESS>/app/kibana#/home/tutorial/dockerMetrics - Check Data for confirmation
+	
 ![Alt Text](https://github.com/knxldge/Bootcamp-Projects/blob/main/Images/metricbeat_screenshot.PNG)
 
 ### Installation Commands Tips
 Ansible Command:
 
-##### Jump-Box:
+#### Jump-Box:
 Command:
 Start Anisble Container:
 	$ sudo docker start <Ansible: Container - Name> 
 
-##### Attach Anisble Container:
+#### Attach Anisble Container:
 	$ sudo docker attach <Anisble: Container - Name>
 
 **** NOTE: To find the container name: $ sudo docker container list -a ****
 
-##### Ansible Docker:
+#### Ansible Docker:
 Move to the Ansible Directory:
 	$ cd /etc/ansible
 NOTE: The files should be within the directory as instructed above
@@ -211,6 +214,7 @@ We can now test the system!
 **** Please Note: The Script can be located via: Scripts/DDoS-Script.sh ****
 
 The following test, We will need to navigate to 'Logs' Page:
+	
 ![Alt Text](https://github.com/knxldge/Bootcamp-Projects/blob/main/Images/Kibana_site.png)
 
 The script is using a 'Nested Loop' where it will continue to ssh to the VM Box over and over again.
@@ -220,6 +224,7 @@ Run in Terminal './DDoS-Script.sh'
 
 #### Example of DDoS Attack
 Notice the logs have been presented with multiple enteries of an attacker attempting to SSH into your VM Box
+	
 ![Alt Text](https://github.com/knxldge/Bootcamp-Projects/blob/main/Images/DDoS_Attack.PNG)
 
 ### WGET-DoS Attack
@@ -227,6 +232,7 @@ Notice the logs have been presented with multiple enteries of an attacker attemp
 **** Please Note: If necessary to obtain 'wget' function via 'sudo apt install wget'
 
 The following test, We will need to navigate to 'metrics' Page:
+	
 ![Alt Text](https://github.com/knxldge/Bootcamp-Projects/blob/main/Images/Kibana_site.png)
 
 The script is using a 'Nested Loop' feature for wget of where it will continue to obtain files from a specific webserver over and over again.
@@ -236,6 +242,7 @@ Run in Terminal './wget-Script.sh'
 
 #### Example of WGET Attack
 Notice the CPU Usage is obtaining high amounts of traffic to its server due to consistantly offering their files.
+	
 ![Alt Text](https://github.com/knxldge/Bootcamp-Projects/blob/main/Images/Web-1_CPU_Usage_%20Stressed_Test.PNG)
 
 ### Stress Test
@@ -249,4 +256,5 @@ The use of a stress function determines how your VMware or server is coping with
 *** This will begin stressing your server for 2 minutes ***
 
 ## Example of a Stress Test
+	
 ![Alt Text](https://github.com/knxldge/Bootcamp-Projects/blob/main/Images/Web-3_CPU_Usage_Stressed_Test.PNG)
