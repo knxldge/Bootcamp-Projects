@@ -102,25 +102,25 @@ Advantages:
 The playbook implements the following tasks:
 In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
 
-##### Install Docker
+### Install Docker
 - Installs a light weight virtual box called "Containers"
 
-##### Install Python3-pip
+### Install Python3-pip
 - Installs a Programming Software used to Install and Managed Software 
 
-##### Install Docker Module
+### Install Docker Module
 - Python Client fo Docker - Required by Ansible to control the state of Docker Containers
 
-##### Increase Virtual Memory
+### Increase Virtual Memory
 - Max Virtual memory of the Virtual Box
 
-##### Use More Memory
+### Use More Memory
 - Configures VM to use more memory *** ELK Container will not run without this setting ***
 
-##### Download and Launch Docker ELK Container
+### Download and Launch Docker ELK Container
 - Download Docker Elk Image and Launch ELK w/ Published Ports to run
 
-##### Enable Docker on Boot
+### Enable Docker on Boot
 - Enable Docker on start up
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
