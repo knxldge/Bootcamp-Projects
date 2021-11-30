@@ -101,25 +101,25 @@ Advantages:
 The playbook implements the following tasks:
 In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
 
-==> Install Docker
+##### Install Docker
 - Installs a light weight virtual box called "Containers"
 
-==> Install Python3-pip
+##### Install Python3-pip
 - Installs a Programming Software used to Install and Managed Software 
 
-==> Install Docker Module
+##### Install Docker Module
 - Python Client fo Docker - Required by Ansible to control the state of Docker Containers
 
-==> Increase Virtual Memory
+##### Increase Virtual Memory
 - Max Virtual memory of the Virtual Box
 
-==> Use More Memory
+##### Use More Memory
 - Configures VM to use more memory *** ELK Container will not run without this setting ***
 
-==> Download and Launch Docker ELK Container
+##### Download and Launch Docker ELK Container
 - Download Docker Elk Image and Launch ELK w/ Published Ports to run
 
-==> Enable Docker on Boot
+##### Enable Docker on Boot
 - Enable Docker on start up
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
@@ -140,10 +140,10 @@ Metricbeat & Filebeat
 		
 These Beats allow us to collect the following information from each machine:
 In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
-==> Filebeat: 
+##### Filebeat: 
 - Filebeat helps generate and organize log files to send to Logstash and Elasticsearch. logs information about the file system, including which files have changed and when.
 
-==> Metricbeat: 
+##### Metricbeat: 
 - Collects Machine Metrics such as uptime (measurement of a system of how healthy the VMware is)
 		
 ### Using the Playbook & Installation Process
@@ -151,14 +151,14 @@ In order to use the playbook, you will need to have an Ansible control node alre
 
 SSH into the control node and follow the steps below:
 
-Installation: ELK Container
+##### Installation: ELK Container
 - Copy the ** install-elk.yml ** file to /etc/ansible/install-elk.yml.
 
 - Update the host file to include group 'elk' with:  <IP ADDRESS> ansible_python_interpreter=/usr/bin/python3
 
 - Run the playbook **ansible-playbook install-elk.yml **, and navigate to ** Your ELK Server - http://***Pub IP Address***/app/kibana#** to check that the installation worked as expected.
 
-Installation: Filebeat
+##### Installation: Filebeat
 - Copy the ** filebeat-playbook.yml **  file to etc/ansible/filebeat-playbook.yml.
 
 - Update the host file to include group 'webservers' with: <IP ADDRESS> ansible_python_interpreter=/usr/bin/python3
@@ -170,7 +170,7 @@ Installation: Filebeat
 - Addition: Navigate to the Kibana weblink: http://<IP ADDRESS>/app/kibana#/home/tutorial/systemLogs - Check Data for confirmation
 !(/Images/filebeats_screenshot)
 
-Installation: Metricbeat
+##### Installation: Metricbeat
 - Copy the ** metricbeat-playbook.yml ** file to /etc/ansible/metricbeat-playbook.yml.
 
 - Update the host file to include group 'webservers' with: <IP ADDRESS> ansible_python_interpreter=/usr/bin/python3
@@ -185,17 +185,17 @@ Installation: Metricbeat
 ### Installation Commands Tips
 Ansible Command:
 
-Jump-Box:
+##### Jump-Box:
 Command:
 Start Anisble Container:
 	$ sudo docker start <Ansible: Container - Name> 
 
-Attach Anisble Container:
+##### Attach Anisble Container:
 	$ sudo docker attach <Anisble: Container - Name>
 
 **** NOTE: To find the container name: $ sudo docker container list -a ****
 
-Ansible Docker:
+##### Ansible Docker:
 Move to the Ansible Directory:
 	$ cd /etc/ansible
 NOTE: The files should be within the directory as instructed above
