@@ -188,20 +188,20 @@ SSH into the control node and follow the steps below:
 	
 ![Alt Text](https://github.com/knxldge/Bootcamp-Projects/blob/main/Images/metricbeat_screenshot.PNG)
 
-### Installation Commands Tips
-Ansible Command:
+## Installation Commands Tips
+### Ansible Command:
 
-### Jump-Box:
+##### Jump-Box:
 Command:
 Start Anisble Container:
 	$ sudo docker start <Ansible: Container - Name> 
 
-### Attach Anisble Container:
+#### Attach Anisble Container:
 	$ sudo docker attach <Anisble: Container - Name>
 
 **** NOTE: To find the container name: $ sudo docker container list -a ****
 
-### Ansible Docker:
+#### Ansible Docker:
 Move to the Ansible Directory:
 	$ cd /etc/ansible
 NOTE: The files should be within the directory as instructed above
