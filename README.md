@@ -5,23 +5,21 @@ The files in this repository were used to configure the network depicted below.
 !(Images/ELK_Network_Stack_Diagram.png)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the config file may be used to install only certain pieces of it, such as Filebeat.
-==================================================================================================================================
-||																||
-||	Playbook File:														||
-||																||
-||	==> Web Server Playbook: Playbook_Files/my-playbook.yml									||
-||	==> ELK VM w/ Docker: Playbook_Files/install-elk.yml									||
-||																||
-||	==> Filebeat Installation:Playbook_Files/filebeat-playbook.yml								||
-||	----| 	Will need a config file for this playbook: Playbook_Files/Config_Files/filebeat-config.yml			||
-||		*** Will need to edit the drop in filebeat.yml destination for this file ***					||
-||																||
-||	==> Metricbeat Installation:Playbook_Files/metricbeat-playbook.yml							||
-||	----| 	Will need a config file for this playbook: Playbook_Files/Config_Files/metricbeat-config.yml			||
-||		*** Will need to edit the drop in metricbeat.yml destination for this file ***					||
-||																||
-==================================================================================================================================
 
+																
+	Playbook File:												
+	==> Web Server Playbook: Playbook_Files/my-playbook.yml									
+	==> ELK VM w/ Docker: Playbook_Files/install-elk.yml									
+																
+	==> Filebeat Installation:Playbook_Files/filebeat-playbook.yml								
+	----| 	Will need a config file for this playbook: Playbook_Files/Config_Files/filebeat-config.yml			
+	*** Will need to edit the drop in filebeat.yml destination for this file ***					
+																
+	==> Metricbeat Installation:Playbook_Files/metricbeat-playbook.yml							
+	----| 	Will need a config file for this playbook: Playbook_Files/Config_Files/metricbeat-config.yml			
+		*** Will need to edit the drop in metricbeat.yml destination for this file ***					
+																
+																
 This document contains the following details:
 - Description of the Topology
 - Access Policies
@@ -223,7 +221,7 @@ The script is using a 'Nested Loop' where it will continue to ssh to the VM Box 
 Run in Terminal './DDoS-Script.sh'
 **** Please Note: You will need to make the file executable via 'sudo chmod x+ DDoS-Script.sh' ****
 
-## Example of DDoS Attack
+#### Example of DDoS Attack
 Notice the logs have been presented with multiple enteries of an attacker attempting to SSH into your VM Box
 !(/Images/DDoS_Attack)
 
@@ -239,7 +237,7 @@ The script is using a 'Nested Loop' feature for wget of where it will continue t
 Run in Terminal './wget-Script.sh'
 **** Please Note: You will need to make the file executable via 'sudo chmod x+ wget-Script.sh' ****
 
-## Example of WGET Attack
+#### Example of WGET Attack
 Notice the CPU Usage is obtaining high amounts of traffic to its server due to consistantly offering their files.
 !(/Images/Web-1_CPU_Usage_ Stressed Test)
 
