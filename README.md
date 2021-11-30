@@ -142,10 +142,10 @@ Metricbeat & Filebeat
 		
 These Beats allow us to collect the following information from each machine:
 In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
-##### Filebeat: 
+### Filebeat: 
 - Filebeat helps generate and organize log files to send to Logstash and Elasticsearch. logs information about the file system, including which files have changed and when.
 
-##### Metricbeat: 
+### Metricbeat: 
 - Collects Machine Metrics such as uptime (measurement of a system of how healthy the VMware is)
 		
 ### Using the Playbook & Installation Process
@@ -153,14 +153,14 @@ In order to use the playbook, you will need to have an Ansible control node alre
 
 SSH into the control node and follow the steps below:
 
-##### Installation: ELK Container
+####Installation: ELK Container
 - Copy the ** install-elk.yml ** file to /etc/ansible/install-elk.yml.
 
 - Update the host file to include group 'elk' with:  <IP ADDRESS> ansible_python_interpreter=/usr/bin/python3
 
 - Run the playbook **ansible-playbook install-elk.yml **, and navigate to ** Your ELK Server - http://***Pub IP Address***/app/kibana#** to check that the installation worked as expected.
 
-##### Installation: Filebeat
+### Installation: Filebeat
 - Copy the ** filebeat-playbook.yml **  file to etc/ansible/filebeat-playbook.yml.
 
 - Update the host file to include group 'webservers' with: <IP ADDRESS> ansible_python_interpreter=/usr/bin/python3
@@ -172,7 +172,7 @@ SSH into the control node and follow the steps below:
 - Addition: Navigate to the Kibana weblink: http://<IP ADDRESS>/app/kibana#/home/tutorial/systemLogs - Check Data for confirmation
 ![Alt Text](https://github.com/knxldge/Bootcamp-Projects/blob/main/Images/filebeats_screenshot.PNG)
 
-##### Installation: Metricbeat
+### Installation: Metricbeat
 - Copy the ** metricbeat-playbook.yml ** file to /etc/ansible/metricbeat-playbook.yml.
 
 - Update the host file to include group 'webservers' with: <IP ADDRESS> ansible_python_interpreter=/usr/bin/python3
@@ -188,17 +188,17 @@ SSH into the control node and follow the steps below:
 ### Installation Commands Tips
 Ansible Command:
 
-#### Jump-Box:
+### Jump-Box:
 Command:
 Start Anisble Container:
 	$ sudo docker start <Ansible: Container - Name> 
 
-#### Attach Anisble Container:
+### Attach Anisble Container:
 	$ sudo docker attach <Anisble: Container - Name>
 
 **** NOTE: To find the container name: $ sudo docker container list -a ****
 
-#### Ansible Docker:
+### Ansible Docker:
 Move to the Ansible Directory:
 	$ cd /etc/ansible
 NOTE: The files should be within the directory as instructed above
@@ -255,6 +255,6 @@ The use of a stress function determines how your VMware or server is coping with
 - Run the Stress Command: 'sudo stress --cpu 1 -timeout 120'
 *** This will begin stressing your server for 2 minutes ***
 
-## Example of a Stress Test
+#### Example of a Stress Test
 	
 ![Alt Text](https://github.com/knxldge/Bootcamp-Projects/blob/main/Images/Web-3_CPU_Usage_Stressed_Test.PNG)
